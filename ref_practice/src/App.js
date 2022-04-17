@@ -1,14 +1,12 @@
 import React, { Component } from 'react';
-import ScrollBox from './ScrollBox';
-import ValidationSample from './ValidationSample';
+import RefSample2 from './RefSample2';
 
 class App extends Component {
   render() {
     return (
       <div>
-        <ScrollBox ref={(ref) => this.ScrollBox=ref}></ScrollBox>
-        <button onClick={() => this.ScrollBox.scrollToBottom()}>맨 밑으로</button>
-        <ValidationSample></ValidationSample>
+        <RefSample2 ref={(ref)=>this.a=ref}></RefSample2>
+        <button onClick={()=>this.a.boxDown()}>ddddd</button>
       </div>
     );
   }
