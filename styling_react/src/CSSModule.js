@@ -1,5 +1,5 @@
 import React from 'react';
-import style from './CSSModule.module.css';
+import style from './CSSModule.module.scss';
 
 const CSSModule = () => {
     console.log(style)
