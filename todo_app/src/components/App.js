@@ -3,27 +3,24 @@ import TodoInsert from "./TodoInsert";
 import TodoList from "./TodoList";
 import TodoTemplate from "./TodoTemplate";
 
-function App() {
-  const [todos, setTodos] = useState([
-    {
-      id: 1,
-      text: "리액트의 기초 알아보기",
-      checked: true,
-    },
-    {
-      id: 2,
-      text: "컴포넌트 스타일링 해보기",
-      checked: true,
-    },
-    {
-      id: 3,
-      text: "일정 관리 앱 만들어보기",
+function crateBulkTodos() {
+  const array =[];
+  for (let i = 1; i <= 2500; i++){
+    array.push({
+      id:1,
+      text:`할 일 ${i}`,
       checked: false,
-    },
-  ]);
+    });
+  }
+  return array;
+}
+
+function App() {
+  const [todos, setTodos] = useState(crateBulkTodos);
+
   //고유 값으로 사용될 id
   //ref를 사용하여 변수 닫기
-  const nextId = useRef(4);
+  const nextId = useRef(2501);
 
   const onInsert = useCallback(
     (text) => {
