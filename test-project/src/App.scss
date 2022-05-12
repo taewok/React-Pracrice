@@ -1,0 +1,111 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background: rgb(161, 161, 161);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .main_box{
+        width: 512px;
+        height: 700px;
+        background-color: rgb(244, 244, 203);
+        .title{
+            width: 100%;
+            background-color: rgb(184, 254, 159);
+            height: 60px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .insert{
+            width: 100%;
+            height: 45px;
+            display: flex;
+            form{
+                width: 100%;
+                display: flex;
+                input{
+                   outline: none;
+                   border: none;
+                   flex: 1;
+                   font-size: 1.5rem;
+                   &::placeholder{
+                       color: rgb(206, 206, 206);
+                   }
+                }
+                button{
+                    width: 45px;
+                    height: 45px;
+                    background: none;
+                    outline:none;
+                    border: none;
+                    cursor: pointer;
+                    font-size: 30px;
+                    background-color: rgb(202, 199, 199);
+                    transition: 0.1s background ease-in;
+                    &:hover{
+                        background-color: red;
+                    }
+                }
+            }
+        }
+        .list_box{
+            width: 492px;
+            height: 595px;
+            padding: 0px 10px;
+            overflow: auto;
+            div{
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                input{
+                    width: 20px;
+                    height: 20px;
+                    margin-right: 15px;
+                    cursor: pointer;
+                    &:checked{
+                        &+li{
+                            text-decoration: line-through;
+                            color: gray;
+                        }
+                    }
+                }
+            }
+            ul{
+                list-style: none;
+                div{
+                    li{
+                        height: 40px;
+                        display: flex;
+                        justify-content: flex-start;
+                        align-items: center;
+                        font-size: 1.3rem;
+                        flex: 1;
+                    }
+                    button{
+                        outline: none;
+                        background: none;
+                        border:none;
+                        width: 30px;
+                        height: 30px;
+                        border-radius: 50%;
+                        border: 1px solid red;
+                        color: red;
+                        cursor: pointer;
+                        font-weight: bold;
+                        transition: all 0.1s ease-in;
+                        &:hover{
+                            background-color: rgb(255, 157, 58);
+                            border:none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+}
