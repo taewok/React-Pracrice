@@ -1,23 +1,41 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
+import { Link, Route, Routes} from "react-router-dom";
+import "./App.css";
+import About from "./About";
+import Home from "./Home";
 
 function App() {
+  const [user, setUser] = useState([
+    {
+      num: 1,
+      name: "taewok1",
+    },
+    {
+      num: 2,
+      name: "taewok2",
+    },
+    {
+      num: 3,
+      name: "taewok3",
+    },
+    {
+      num: 4,
+      name: "taewok4",
+    },
+  ]);
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <nav>
+        {user.map((user) => (
+          <Link to={`/About?name=${user.name}`} key={user.num}>
+            {user.name}
+          </Link>
+        ))}
+      </nav>
+      <Routes>
+        <Route path="/" element={<Home/>} />
+        <Route path="/About" element={<About/>} />
+      </Routes>
     </div>
   );
 }
