@@ -1,14 +1,12 @@
 import React from 'react';
-import { useLocation } from 'react-router-dom';
-import queryString from "qs";
+import {useParams } from 'react-router-dom';
 
 const About = () => {
-    const a = useLocation();
-    const b = queryString.parse(a.search,{ ignoreQueryPrefix: true })
-    console.log(b)
+    const a = useParams();
+    console.log(a)
     return (
         <div>
-            {b.name}
+            {a.name}
         </div>
     );
 };

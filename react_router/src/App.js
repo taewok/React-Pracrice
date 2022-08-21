@@ -27,14 +27,14 @@ function App() {
     <div className="App">
       <nav>
         {user.map((user) => (
-          <Link to={`/About?name=${user.name}`} key={user.num}>
+          <Link to={`/About/${user.name}`} key={user.num}>
             {user.name}
           </Link>
         ))}
       </nav>
       <Routes>
         <Route path="/" element={<Home/>} />
-        <Route path="/About" element={<About/>} />
+        <Route path="/About/:name" element={<About/>} />
       </Routes>
     </div>
   );
