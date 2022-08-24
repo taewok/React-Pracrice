@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Link, Route, Routes} from "react-router-dom";
+import styled from "styled-components";
 import "./App.css";
 import About from "./About";
 import Home from "./Home";
