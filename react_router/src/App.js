@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Link, Route, Routes} from "react-router-dom";
+import { NavLink, Route, Routes} from "react-router-dom";
 import styled from "styled-components";
 import axios from "axios";
 import "./App.css";
@@ -29,9 +29,9 @@ function App() {
     <div className="App">
       <nav>
         {user.map((user) => (
-          <Link to={`/About/${user.name}`} key={user.num}>
+          <NavLink to={`/About/${user.name}`} key={user.num} activeclassname='active'>
             {user.name}
-          </Link>
+          </NavLink>
         ))}
       </nav>
       <Routes>
