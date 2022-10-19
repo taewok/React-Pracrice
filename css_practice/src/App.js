@@ -1,12 +1,11 @@
-import Button from "./Component/Button";
-import Slider from "./Component/Slider";
+import ProfileCard from "./Component/ProfileCard";
+
 
 function App() {
   return (
-    <div>
-      <Button></Button>
-      <Slider/>
-    </div>
+    <>
+      <ProfileCard/>
+    </>
   );
 }
 
