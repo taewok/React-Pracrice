@@ -1,10 +1,9 @@
 import ProfileCard from "./Component/ProfileCard";
 
-
 function App() {
   return (
     <>
-      <ProfileCard/>
+      <ProfileCard></ProfileCard>
     </>
   );
 }
