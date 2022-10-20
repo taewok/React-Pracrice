@@ -1,9 +1,9 @@
-import ProfileCard from "./Component/ProfileCard";
+import Button2 from "./Component/Button2";
 
 function App() {
   return (
     <>
-      <ProfileCard></ProfileCard>
+      <Button2/>
     </>
   );
 }
