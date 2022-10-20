@@ -1,0 +1,116 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #000;
+}
+
+.center {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  .outer {
+    position: relative;
+    margin: 0 50px;
+    cursor: pointer;
+    button {
+      position: absolute;
+      display: inline-block;
+      color: white;
+      font-size: 20px;
+      background-color: rgb(46, 46, 46);
+      border: none;
+      cursor: pointer;
+    }
+  }
+  .button {
+    height: 70px;
+    width: 220px;
+    border-radius: 50px;
+    button {
+      border-radius: 50px;
+      inset: 6px;
+      &:hover {
+        &::before {
+          display: block;
+          animation: animate 1.5s linear infinite;
+        }
+        &::after{
+          display: block;
+        }
+      }
+      &::before {
+        display: none;
+        position: absolute;
+        z-index: -1;
+        content: "";
+        inset: -3px;
+        border-radius: 50px;
+        background: linear-gradient(#14ffe9, #ffeb3b, #ff00e0);
+      }
+      &::after {
+        display: none;
+        content: "";
+        position: absolute;
+        z-index: -1;
+        inset: 0;
+        border-radius: 50px;
+        background: linear-gradient(#14ffe9, #ffeb3b, #ff00e0);
+        filter: blur(20px);
+      }
+    }
+  }
+  .circle {
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    button {
+      inset: 10px;
+      border-radius: 50%;
+      &:hover {
+        &::before {
+          display: block;
+          animation: animate 1.5s linear infinite;
+        }
+        &::after {
+          display: block;
+        }
+      }
+      &::before {
+        display: none;
+        position: absolute;
+        z-index: -1;
+        content: "";
+        inset: -6px;
+        border-radius: 50%;
+        background: linear-gradient(#14ffe9, #ffeb3b, #ff00e0);
+      }
+      &::after {
+        display: none;
+        position: absolute;
+        z-index: -1;
+        content: "";
+        inset: -6px;
+        border-radius: 50%;
+        background: linear-gradient(#14ffe9, #ffeb3b, #ff00e0);
+        filter: blur(20px);
+      }
+    }
+  }
+}
+
+@keyframes animate {
+  0% {
+    filter: hue-rotate(0deg);
+  }
+  100% {
+    filter: hue-rotate(360deg);
+  }
+}
