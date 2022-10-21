@@ -1,0 +1,67 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  height: 100vh;
+  background-color: #000;
+}
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  input[type="checkbox"] {
+    position: relative;
+    width: 320px;
+    height: 110px;
+    -webkit-appearance: none;
+    background: linear-gradient(0deg, #333, #000);
+    border-radius: 60px;
+    box-shadow: 0 0 0 4px #343434, 0 0 0 5px #3e3e3e,
+      inset 0 0 10px rgba(0, 0, 0, 1), 0 5px 20px rgba(0, 0, 0, 5),
+      inset 0 0 15px rgba(0, 0, 0, 0.2);
+      cursor: pointer;
+    &:checked {
+      background: linear-gradient(0deg, #6dd1ff, #20b7ff);
+      box-shadow: 0 0 0 4px #343434, 0 0 0 5px #3e3e3e,
+      inset 0 0 10px rgba(0, 0, 0, 1), 0 5px 20px rgba(0, 0, 0, 5),
+      inset 0 0 15px rgba(0, 0, 0, 0.2);
+      &::before {
+        left: 34.5%;
+      }
+      &::after {
+        left: 94.5%;
+        background: #63cdff;
+        box-shadow: 0 0 5px #13b3ff, 0 0 15px #13b3ff;
+      }
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 210px;
+      height: 110px;
+      background: linear-gradient(0deg, #000, #6b6b6b);
+      border-radius: 60px;
+      box-shadow: 0 0 0 1px #232323;
+      transition: 0.3s;
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      top: 48%;
+      left: 190px;
+      width: 10px;
+      height: 10px;
+      background: linear-gradient(0deg, #000, #6b6b6b);
+      border-radius: 50%;
+      box-shadow: 0 0 0 1px #232323;
+      transition: 0.3s;
+    }
+  }
+}
