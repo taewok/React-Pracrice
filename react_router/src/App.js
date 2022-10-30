@@ -1,42 +1,21 @@
 import { useState } from "react";
-import { NavLink, Route, Routes} from "react-router-dom";
+import { NavLink, Route, Routes } from "react-router-dom";
 import styled from "styled-components";
 import axios from "axios";
 import "./App.css";
-import About from "./About";
-import Home from "./Home";
+import Home from "./Component/Home";
+import About from "./Component/About";
 
 function App() {
-  const [user, setUser] = useState([
-    {
-      num: 1,
-      name: "taewok1",
-    },
-    {
-      num: 2,
-      name: "taewok2",
-    },
-    {
-      num: 3,
-      name: "taewok3",
-    },
-    {
-      num: 4,
-      name: "taewok4",
-    },
-  ]);
+  const [text, setText] = useState("");
   return (
     <div className="App">
-      <nav>
-        {user.map((user) => (
-          <NavLink to={`/About/${user.name}`} key={user.num} activeclassname='active'>
-            {user.name}
-          </NavLink>
-        ))}
-      </nav>
+      <input></input>
       <Routes>
-        <Route path="/" element={<Home/>} />
-        <Route path="/About/:name" element={<About/>} />
+        <Route path="/" element={<Home />}>
+        <Route path="About" element={<About />} />
+        </Route>
+        
       </Routes>
     </div>
   );
