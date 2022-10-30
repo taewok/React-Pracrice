@@ -1,11 +1,11 @@
-import LoadingSpinner from "./Component/LoadingSpinner";
+import ImgEffect from "./Component/ImgEffect";
 
 
 function App() {
   
   return (
     <>
-      <LoadingSpinner/>
+      <ImgEffect/>
     </>
   );
 }

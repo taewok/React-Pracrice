@@ -1,0 +1,29 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #000;
+  .imgDBox {
+    overflow: hidden;
+    cursor: pointer;
+    span {
+      display: block;
+      width: 300px;
+    height: 250px;
+      background-image: url("http://file.koreafilm.or.kr/still/copy/00/63/27/DST785098_01.jpg");
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+      transition: all 0.5s;
+      &:hover {
+        transform: scale(1.2);
+      }
+    }
+  }
+}
