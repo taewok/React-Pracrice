@@ -1,6 +1,6 @@
 /* eslint-disable jsx-a11y/alt-text */
 import React, { useEffect } from "react";
-import "./Spin.css";
+import "../Css/Spin.css";
 
 const Spin = () => {
   useEffect(()=>{

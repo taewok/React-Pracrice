@@ -1,5 +1,5 @@
 import "./App.css";
-import Spin from "./Spin";
+import Spin from "./component/Spin";
 
 function App() {
   
