@@ -1,0 +1,36 @@
+*{
+    margin:0;
+    padding:0;
+}
+body{
+    width: 100%;
+    height:100vh;
+}
+#root{
+    width: 100%;
+    height: 100%;
+}
+.main{
+    width: 100%;
+    height: 100%;
+    .one{
+        width: 100%;
+        height:100%;
+        background-color: red;
+    }
+    .two{
+        width: 100%;
+        height:100%;
+        background-color: blue;
+    }
+    .three{
+        width: 100%;
+        height:100%;
+        background-color: green;
+    }
+    .four{
+        width: 100%;
+        height:100%;
+        background-color: yellow;
+    }
+}
