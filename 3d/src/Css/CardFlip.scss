@@ -1,0 +1,33 @@
+ul{
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    height: 300px;
+    list-style: none;
+    transform: perspective(1000px);
+    li{
+        position: relative;
+        width: 250px;
+        transform-style: preserve-3d;
+        transition: all 0.5s linear;
+        cursor: pointer;
+        &:hover{
+            transform: rotateY(180deg);
+        }
+        div:nth-child(1){
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-color: red;
+            backface-visibility: hidden;
+        }
+        div:nth-child(2){
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-color: blue;
+            transform: rotateY(180deg);
+            backface-visibility: hidden;
+        }
+    }
+}

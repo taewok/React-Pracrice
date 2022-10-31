@@ -1,11 +1,11 @@
 import "./App.css";
-import Spin from "./component/Spin";
+import CardFlip from "./component/CardFlip";
 
 function App() {
   
   return (
     <>
-      <Spin></Spin>
+      <CardFlip/>
     </>
   );
 }
