@@ -1,11 +1,11 @@
 import "./App.css";
-import CardFlip from "./component/CardFlip";
+import PostEffect from "./component/PostEffect";
 
 function App() {
   
   return (
     <>
-      <CardFlip/>
+      <PostEffect/>
     </>
   );
 }
